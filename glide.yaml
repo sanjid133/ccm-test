@@ -1,0 +1,27 @@
+package: github.com/sanjid133/ccm-test
+import:
+- package: github.com/onsi/ginkgo
+  version: ~1.6.0
+- package: github.com/onsi/gomega
+  version: ~1.4.1
+- package: github.com/pharmer/pharmer
+  version: ~0.1.0-rc.5
+  subpackages:
+  - cloud
+- package: k8s.io/api
+  subpackages:
+  - core/v1
+- package: k8s.io/apimachinery
+  subpackages:
+  - pkg/types
+- package: k8s.io/kubernetes
+  version: ~1.12.0-alpha.1
+  subpackages:
+  - pkg/cloudprovider
+  - pkg/cloudprovider/providers/fake
+  - pkg/controller
+testImport:
+- package: github.com/kubernetes-csi/csi-test
+  version: ~0.3.0-2
+  subpackages:
+  - pkg/sanity
